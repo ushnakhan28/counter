@@ -6,7 +6,7 @@ import Image from "next/image";
 const Reviews = () => {
   const msg = [
     {
-      head: "Amazing Experience!",
+      head: "it's an Amazing Experience!",
     },
     {
       head: "Amazing Experience!",
