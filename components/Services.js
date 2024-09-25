@@ -38,13 +38,13 @@ const Services = () => {
 
   return (
     <>
-      <div className="mt-[120px] max-w-[1200px] mx-auto">
+      <div className="mt-[120px] max-w-[1200px] mx-auto" id="services">
         <Head title="SERVICES" />
         <Subhead title="Explore Our" content="Services" />
         <div className="grid grid-cols-3 gap-16 mt-[80px]">
           {cards.map((item, index) => (
             <div key={index}>
-              <div className="group flex items-center flex-col justify-center px-5 bg-white w-96 h-[350px] shadow-2xl rounded-xl hover:bg-[#FEA116] duration-[0.6s] hover:shadow-none ">
+              <div className="group flex items-center flex-col justify-center px-5 bg-white w-[350px] h-[320px] shadow-2xl rounded-xl hover:bg-[#FEA116] duration-[0.6s] hover:shadow-none ">
                 <div className="flex justify-center mb-4">
                   <i
                     className={`${item.icon} text-8xl yellow group-hover:text-[#ffffff] duration-[0.6s]`}

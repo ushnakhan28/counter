@@ -1,13 +1,28 @@
-import React from "react";
+import React, { useState } from "react";
 import Image from "next/image";
 import Btn from "@/components/Btn";
 import Nav from "@/components/Nav";
+import Form from "./Form";
+import Hotel from "./Hotel";
 
 const Header = () => {
-  const items = ["Home", "AboutUs", "Services", "Portfolio", "Contact"];
+  const [form, setForm] = useState(false);
+
+  const items = [
+    { name: "Home", link: "#home" },
+    { name: "AboutUs", link: "#about" },
+    { name: "Rooms", link: "#rooms" },
+    { name: "Services", link: "#services" },
+    { name: "Contact", link: "#contact" },
+  ];
+
+  const button = () => {
+    setForm(!form);
+  };
+
   return (
     <>
-      <div className="relative h-[700px] blend">
+      <div className="relative h-[700px] blend" id="home">
         <Image
           src="/pix/hotel.jpg"
           alt="Background"
@@ -16,14 +31,10 @@ const Header = () => {
           quality={100}
           className="-z-10"
         />
-
         <div className="bg-black bg-opacity-70 relative h-[80px] text-white flex justify-around items-center">
-          <div className="leading-[1.7rem]">
-            <span className="text-[24px]">Royal Retreat</span> <br />
-            <span className="text-[45px] font-bold yellow">HOTEL</span>
-          </div>
+          <Hotel />
           <Nav content={items} />
-          <Btn text="Log In" />
+          <Btn onClick={button} text="Book Online" />
         </div>
 
         <div className="mt-[120px]">
@@ -39,10 +50,25 @@ const Header = () => {
             the Breathtaking <br /> Views and a Relaxing Atmosphere.
           </p>
           <div className="mt-9 space-x-8 flex justify-center">
-            <Btn text="Book Now" />
+            <Btn text="Book Now" onClick={button} />
             <Btn text="Explore More" />
           </div>
         </div>
+        {form && (
+          <div className="flex justify-center items-center bg-black bg-opacity-60 top-0 left-0 w-full h-full fixed z-10">
+            <div className="p-5 relative">
+              <div className="top-0 right-0 absolute">
+                <div className=" bg-[#000041] rounded-full w-10 h-10 flex justify-center items-center">
+                  <i
+                    className="fa-solid fa-xmark text-2xl text-white"
+                    onClick={button}
+                  ></i>
+                </div>
+              </div>
+              <Form />
+            </div>
+          </div>
+        )}
       </div>
     </>
   );

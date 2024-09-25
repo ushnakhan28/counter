@@ -5,6 +5,8 @@ import Services from "@/components/Services";
 import React from "react";
 import Head from "next/head";
 import Reviews from "@/components/Reviews";
+import Contact from "@/components/Contact";
+import Footer from "@/components/Footer";
 
 const Home = () => {
   return (
@@ -20,6 +22,8 @@ const Home = () => {
       <Rooms />
       <Services />
       <Reviews />
+      <Contact />
+      <Footer />
     </>
   );
 };

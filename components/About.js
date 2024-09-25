@@ -7,7 +7,7 @@ import Subhead from "./Subhead";
 const About = () => {
   return (
     <>
-      <div className="mt-[120px] max-w-[1200px] mx-auto">
+      <div className="mt-[120px] max-w-[1200px] mx-auto" id="about">
         <Head title="ABOUT US" />
         <Subhead title="Explore Our" content="Luxuries" />
         <div className="flex flex-wrap justify-between items-start gap-8 mt-[80px]">

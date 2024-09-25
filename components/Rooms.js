@@ -1,27 +1,45 @@
-import React from "react";
+import React, { useState } from "react";
 import Head from "./Head";
 import Subhead from "./Subhead";
 import Image from "next/image";
 import Button from "./Button";
 
 const Rooms = () => {
+  const [openImg, setOpenImg] = useState(false);
+  const [selectedImg, setSelectedImage] = useState("");
+
+  const openModel = (pic) => {
+    setSelectedImage(pic);
+    setOpenImg(true);
+  };
+
+  const closeImg = () => {
+    setOpenImg(false);
+    setSelectedImage("");
+  };
+
   const cards = [
     {
+      pic: "/pix/pool2.jpg",
       head: "Executive Suite",
       para: "Experience comfort and elegance with modern amenities.",
     },
     {
+      pic: "/pix/hotel1.jpg",
+
       head: "Honeymoon Suite",
       para: "Extra space with a cozy living area and premium amenities.",
     },
     {
+      pic: "/pix/hotel.jpg",
+
       head: "Presidential Suite",
       para: "Ultimate luxury with expansive areas and exquisite décor.",
     },
   ];
   return (
     <>
-      <div className="mt-[120px] max-w-[1200px] mx-auto">
+      <div className="mt-[120px] max-w-[1200px] mx-auto" id="rooms">
         <Head title="ROOMS" />
         <Subhead title="Explore Our" content="Rooms" />
         <div className="flex justify-between mt-[80px]">
@@ -30,9 +48,12 @@ const Rooms = () => {
               key={index}
               className="relative bg-white w-[330px] rounded-3xl overflow-hidden shadow-2xl transition-transform hover:-translate-y-3"
             >
-              <div className="relative w-[350px] h-[180px] overflow-hidden group">
+              <div
+                className="relative w-[350px] h-[180px] overflow-hidden group cursor-zoom-in"
+                onClick={() => openModel(item.pic)}
+              >
                 <Image
-                  src={"/pix/pool2.jpg"}
+                  src={item.pic}
                   layout="fill"
                   objectFit="cover"
                   className="transition-transform duration-500 ease-in-out group-hover:scale-110"
@@ -66,9 +87,21 @@ const Rooms = () => {
             </div>
           ))}
         </div>
+        {openImg && (
+          <div className="flex justify-center items-center h-full w-full bg-black bg-opacity-50 fixed top-0 left-0 z-50">
+            <div className="relative">
+              <i
+                className="fa-solid fa-xmark text-4xl text-white absolute top-1 right-5 z-50"
+                onClick={closeImg}
+              ></i>
+              <div className="relative w-[80vw] h-[80vh]">
+                <Image src={selectedImg} layout="fill" objectFit="contain" />
+              </div>
+            </div>
+          </div>
+        )}
       </div>
     </>
   );
 };
-
 export default Rooms;
