@@ -41,14 +41,14 @@ const Footer = () => {
               />
               <div className="absolute inset-0 bg-black opacity-0 group-hover:opacity-40 duration-[0.3s] group-hover:mix-blend-multiply"></div>
               <div className=" flex justify-center items-center absolute inset-0 opacity-0 group-hover:opacity-100 duration-[0.3s]">
-                <div className="bg-[#000041] py-3 px-4 rounded-full">
-                  <i class="fa-solid fa-magnifying-glass text-white text-2xl"></i>
+                <div className="bg-[#000041] py-3 px-4 rounded-full cursor-pointer">
+                  <i class="fa-solid fa-magnifying-glass text-white text-2xl hover:text-[#FEA116] duration-[0.3s]"></i>
                 </div>
               </div>
             </div>
           ))}
         </div>
-        <div className="bg-[#000041] flex items-center justify-around py-16 px-10">
+        <div className="bg-[#000041] flex lg:md:flex-row flex-col lg:md:text-start sm:text-center gap-10 items-center justify-around py-16 px-10">
           <Col1 />
           <Col2 />
           <Col3 />

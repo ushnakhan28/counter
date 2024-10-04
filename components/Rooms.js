@@ -26,7 +26,6 @@ const Rooms = () => {
     },
     {
       pic: "/pix/hotel1.jpg",
-
       head: "Honeymoon Suite",
       para: "Extra space with a cozy living area and premium amenities.",
     },
@@ -42,7 +41,7 @@ const Rooms = () => {
       <div className="mt-[120px] max-w-[1200px] mx-auto" id="rooms">
         <Head title="ROOMS" />
         <Subhead title="Explore Our" content="Rooms" />
-        <div className="flex justify-between mt-[80px]">
+        <div className="grid lg:md:grid-cols-3 sm:grid-cols-1 gap-10 mt-[80px] ">
           {cards.map((item, index) => (
             <div
               key={index}
@@ -66,7 +65,7 @@ const Rooms = () => {
                   USD
                 </p>
               </div>
-              <div className="px-10 py-5 ab">
+              <div className="px-10 py-5">
                 <h1 className="yellow text-[25px] text-center font-bold mt-3">
                   {item.head}
                 </h1>
@@ -81,7 +80,7 @@ const Rooms = () => {
                   <p className="yellow">Wifi</p>
                 </div>
                 <div className="flex justify-center mt-4">
-                  <Button content="Book Now" />
+                  <Button content="Book Now" targetId={"home"} />
                 </div>
               </div>
             </div>
@@ -91,7 +90,7 @@ const Rooms = () => {
           <div className="flex justify-center items-center h-full w-full bg-black bg-opacity-50 fixed top-0 left-0 z-50">
             <div className="relative">
               <i
-                className="fa-solid fa-xmark text-4xl text-white absolute top-1 right-5 z-50"
+                className="fa-solid fa-xmark text-4xl text-[white] absolute top-1 right-5 z-50"
                 onClick={closeImg}
               ></i>
               <div className="relative w-[80vw] h-[80vh]">

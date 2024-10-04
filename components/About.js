@@ -5,13 +5,28 @@ import Button from "./Button";
 import Head from "./Head";
 import Subhead from "./Subhead";
 const About = () => {
+
   return (
     <>
       <div className="mt-[120px] max-w-[1200px] mx-auto" id="about">
         <Head title="ABOUT US" />
         <Subhead title="Explore Our" content="Luxuries" />
-        <div className="flex flex-wrap justify-between items-start gap-8 mt-[80px]">
-          <div className="flex-1 max-w-[48%]">
+        <div className="flex lg:md:flex-row flex-col justify-between gap-10 mt-[80px]">
+          <div className="lg:md:max-w-[50%]">
+            <div className="">
+              <div className="relative">
+                <Image
+                  src={"/pix/picture.jpg"}
+                  width={550}
+                  height={550}
+                  className="sm:w-full"
+                />
+                <div className="absolute bg-black bg-opacity-30 inset-0 sm:w-full"></div>
+              </div>
+            </div>
+          </div>
+
+          <div className="lg:md:max-w-[50%]">
             <h1 className="text-[#000041] font-bold text-3xl mb-4">
               Welcome To Our Hotel
             </h1>
@@ -23,26 +38,7 @@ const About = () => {
             </p>
             <Box />
             <div className="mt-5">
-              <Button content="Explore More" />
-            </div>
-          </div>
-
-          <div className="flex-1 max-w-[48%]">
-            <div className="grid grid-cols-2 gap-2">
-              <Image
-                src={"/pix/pool1.jpg"}
-                width={210}
-                height={180}
-                className="mt-[40px] ml-[72px]"
-              />
-              <Image src={"/pix/pool2.jpg"} width={270} height={250} />
-              <Image
-                src={"/pix/pool2.jpg"}
-                width={270}
-                height={250}
-                className="ml-[12px]"
-              />
-              <Image src={"/pix/pool1.jpg"} width={210} height={180} />
+              <Button content="Explore More" targetId={"home"} />
             </div>
           </div>
         </div>

@@ -9,7 +9,6 @@ const Header = () => {
   const [form, setForm] = useState(false);
 
   const items = [
-    { name: "Home", link: "#home" },
     { name: "AboutUs", link: "#about" },
     { name: "Rooms", link: "#rooms" },
     { name: "Services", link: "#services" },
@@ -40,7 +39,7 @@ const Header = () => {
         <div className="mt-[120px]">
           <h1 className="text-center text-white text-[95px] leading-[4rem] tracking-wider">
             Welcome to <br />
-            <span className="purple tracking-widest text-[65px] font-bold">
+            <span className="purple tracking-widest yellow text-[65px] font-bold">
               Royal Retreat Hotel
             </span>
           </h1>

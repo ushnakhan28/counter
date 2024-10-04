@@ -5,6 +5,12 @@ const Nav = ({ content }) => {
   return (
     <>
       <ul className="text-2xl flex space-x-8">
+        <li className="cursor-pointer">
+          <Link href={"#home"}>
+            <span className="relative z-10 text-[#FEA116]">Home</span>
+          </Link>
+          <span className="absolute -bottom-0 w-16 -ml-16 h-1 bg-[#FEA116] transform scale-x-100 origin-bottom-left"></span>
+        </li>
         {content.map((item, index) => (
           <li key={index} className="relative group cursor-pointer">
             <Link href={item.link}>

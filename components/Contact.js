@@ -6,17 +6,17 @@ import Form from "./Form";
 const Contact = () => {
   const info = [
     {
-      icon: "fas fa-map-marker-alt", // Address icon
+      icon: "fas fa-map-marker-alt",
       para: "Address:",
       second: "123 Royal Street, Cityville, Country",
     },
     {
-      icon: "fas fa-envelope", // Email icon
+      icon: "fas fa-envelope",
       para: "Email:",
       second: "contact@royalretreat.com",
     },
     {
-      icon: "fas fa-phone", // Phone icon
+      icon: "fas fa-phone",
       para: "Phone:",
       second: "+1 (123) 456-7890",
     },
@@ -27,8 +27,8 @@ const Contact = () => {
       <div className="mt-[120px] max-w-[1200px] mx-auto" id="contact">
         <Head title="CONTACT US" />
         <Subhead title="Get in" content="Touch" extra=" With Us" />
-        <div className="flex justify-between mt-[80px] items-center">
-          <div className="max-w-[48%]">
+        <div className="flex lg:md:flex-row sm:flex-col mt-[80px] gap-10">
+          <div>
             <h1 className="blue text-3xl font-bold">Get in Touch With Us</h1>
             <p className="text-[#666666] text-[18px] mt-3">
               For any inquiries or assistance, please feel free to contact us
@@ -48,7 +48,7 @@ const Contact = () => {
               ))}
             </div>
           </div>
-          <div className="max-w-[48%]">
+          <div>
             <Form />
           </div>
         </div>
