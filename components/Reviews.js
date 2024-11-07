@@ -64,7 +64,7 @@ const Reviews = () => {
   return (
     <>
       <div className="mt-[120px] max-w-[1200px] mx-auto">
-        <Head title="Reviews" />
+        <Head title="REVIEWS" />
         <Subhead title="What Our" content="Guests" extra=" Say" />
         <Slider
           {...settings}

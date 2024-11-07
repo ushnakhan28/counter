@@ -90,7 +90,7 @@ const Rooms = () => {
           <div className="flex justify-center items-center h-full w-full bg-black bg-opacity-50 fixed top-0 left-0 z-50">
             <div className="relative">
               <i
-                className="fa-solid fa-xmark text-4xl text-[white] absolute top-1 right-5 z-50"
+                className="fa-solid cursor-pointer fa-xmark text-4xl text-[white] absolute top-1 right-5 z-50"
                 onClick={closeImg}
               ></i>
               <div className="relative w-[80vw] h-[80vh]">

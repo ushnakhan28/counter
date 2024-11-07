@@ -11,7 +11,7 @@ const About = () => {
       <div className="mt-[120px] max-w-[1200px] mx-auto" id="about">
         <Head title="ABOUT US" />
         <Subhead title="Explore Our" content="Luxuries" />
-        <div className="flex lg:md:flex-row flex-col justify-between gap-10 mt-[80px]">
+        <div className="flex lg:md:flex-row flex-col justify-center gap-10 mt-[80px]">
           <div className="lg:md:max-w-[50%]">
             <div className="">
               <div className="relative">

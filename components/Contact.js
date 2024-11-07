@@ -27,8 +27,11 @@ const Contact = () => {
       <div className="mt-[120px] max-w-[1200px] mx-auto" id="contact">
         <Head title="CONTACT US" />
         <Subhead title="Get in" content="Touch" extra=" With Us" />
-        <div className="flex lg:md:flex-row sm:flex-col mt-[80px] gap-10">
+        <div className="flex items-center justify-center lg:md:flex-row flex-col mt-[80px] gap-24">
           <div>
+            <Form />
+          </div>
+          <div className="max-w-[55%]">
             <h1 className="blue text-3xl font-bold">Get in Touch With Us</h1>
             <p className="text-[#666666] text-[18px] mt-3">
               For any inquiries or assistance, please feel free to contact us
@@ -47,9 +50,6 @@ const Contact = () => {
                 </div>
               ))}
             </div>
-          </div>
-          <div>
-            <Form />
           </div>
         </div>
       </div>

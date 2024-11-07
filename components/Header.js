@@ -57,7 +57,7 @@ const Header = () => {
           <div className="flex justify-center items-center bg-black bg-opacity-60 top-0 left-0 w-full h-full fixed z-10">
             <div className="p-5 relative">
               <div className="top-0 right-0 absolute">
-                <div className=" bg-[#000041] rounded-full w-10 h-10 flex justify-center items-center">
+                <div className=" cursor-pointer bg-[#000041] rounded-full w-10 h-10 flex justify-center items-center">
                   <i
                     className="fa-solid fa-xmark text-2xl text-white"
                     onClick={button}

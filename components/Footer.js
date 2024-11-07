@@ -58,7 +58,7 @@ const Footer = () => {
             Subscribe to our newsletter to receive the latest updates and
             offers.
           </p>
-          <p className="text-white text-lg -mt-1">
+          <p className="blue text-lg -mt-1">
             © 2024 Royal Retreat Hotel. All Rights Reserved.
           </p>
         </div>

@@ -20,14 +20,14 @@ const Col1 = () => {
   ];
   return (
     <>
-      <div className="md:lg:w-[26%] sm:w-[50%]">
+      <div className="md:lg:w-[26%] w-[50%] text-center">
         <Hotel />
         <p className="text-[#D3D3D3] text-[15px] mt-1">
           At the Royal Retreat Hotel, we offer the exceptional hospitality and
           the luxurious accommodations in the heart of America. Enjoy our
           topnotch amenities for an unforgettable stay.
         </p>
-        <div className="flex md:lg:justify-start sm:justify-center">
+        <div className="flex justify-center">
           {icons.map((item, index) => (
             <div key={index}>
               <a href={item.link} target="_blank" rel="noopener noreferrer">
